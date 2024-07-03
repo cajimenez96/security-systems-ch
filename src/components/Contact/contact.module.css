@@ -3,6 +3,7 @@
 }
 
 .container {
+  margin-top: 3rem;
   width: 100%;
 }
 
@@ -21,6 +22,12 @@
   padding: 30px;
   background-color: var(--color-light);
   border-radius: 12px;
+}
+
+@media (max-width: 821px) {
+  .formContainer {
+    width: 80%;
+  }
 }
 
 @media (max-width: 768px) {

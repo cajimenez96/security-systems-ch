@@ -11,11 +11,13 @@
   height: 23px;
   width: 23px;
 }
-.container {
+.containerLogo {
   display: flex;
   justify-items: center;
   align-items: center;
   gap: 1rem;
+  color: var(--color-light);
+  text-decoration: none;
 }
 
 .menu {
@@ -25,6 +27,7 @@
 
 .navbar {
   margin-top: 5px;
+  margin-inline: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,6 +52,9 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    margin-inline: 0px
+  }
   .avatar {
     height: 34px;
     width: 34px;

@@ -4,6 +4,7 @@ import Button from "../Button";
 import Heading from "../Heading";
 import Input from "../Input";
 import styles from "./contact.module.css";
+import { Motion } from "../Motion";
 
 const Contact = () => {
 
@@ -14,28 +15,30 @@ const Contact = () => {
   }
 
   return (
-    <section className={styles.container} id="contact">
-      <div className={styles.formContainer}>
+    <Motion>
+      <section className={styles.container} id="contact">
+        <div className={styles.formContainer}>
 
-        <Heading level={3} className={styles.formTitle}>
-          ¿Querés contactarte conmigo?
-        </Heading>
+          <Heading level={3} className={styles.formTitle}>
+            ¿Querés contactarte conmigo?
+          </Heading>
 
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <div>
-            <Input type="text" label="Nombre completo" />
-            <Input type="email" label="Correo electronico" />
-            <Input type="text" label="Asunto" />
-            <Input type="textarea" label="Mensaje" />
-          </div>
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div>
+              <Input type="text" label="Nombre completo" />
+              <Input type="email" label="Correo electronico" />
+              <Input type="text" label="Asunto" />
+              <Input type="textarea" label="Mensaje" />
+            </div>
 
-          <div className={styles.button}>
-            <Button type="submit">Enviar</Button>
-          </div>
-        </form>
-          
-      </div>
-    </section>
+            <div className={styles.button}>
+              <Button type="submit">Enviar</Button>
+            </div>
+          </form>
+            
+        </div>
+      </section>
+    </Motion>
   )
 }
 
