@@ -1,6 +1,7 @@
 :root {
   --color-dark: #000;
-  --color-light: #ffff;
+  --color-light: #e7e7e7;
+  --color-alert: #CB2929;
 }
 
 html {
