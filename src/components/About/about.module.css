@@ -1,6 +1,60 @@
+.container {
+  margin-inline: 100px;
+}
+
+.containerInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.description {
+  order: 1;
+  max-width: 50%;
+}
+
+.image {
+  order: 2;
+  width: 500px;
+  height: 500px;
+  margin-top: -20px;
+  border-radius: 100%;
+}
+
+.interestsTitle {
+  font-size: 22px;
+}
+
 .title {
+  margin-top: 1rem;
   text-transform: uppercase;
   font-size: 65px;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+@media (max-width: 769px) {
+  .container {
+    margin-inline: 0px;
+  }
+
+  .containerInfo {
+    justify-content: space-between;
+  }
+
+  .description {
+    order: 2;
+    max-width: 100%;
+  }
+
+  .image {
+    order: 1;
+    width: 300px;
+    height: 300px
+  }
+
+  .title {
+    text-align: center;
+  }
 }
