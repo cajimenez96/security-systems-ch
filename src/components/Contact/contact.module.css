@@ -22,3 +22,13 @@
   background-color: var(--color-light);
   border-radius: 12px;
 }
+
+@media (max-width: 768px) {
+  .formTitle {
+    font-size: 25px;
+  }
+
+  .formContainer {
+    width: 100%;
+  }
+}
