@@ -16,26 +16,24 @@ const Contact = () => {
   return (
     <section className={styles.container} id="contact">
       <div className={styles.formContainer}>
-                
 
-          <Heading level={3} className={styles.formTitle}>
-            ¿Querés contactarte conmigo?
-          </Heading>
+        <Heading level={3} className={styles.formTitle}>
+          ¿Querés contactarte conmigo?
+        </Heading>
 
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <div>
-              <Input type="text" label="Nombre completo" />
-              <Input type="email" label="Correo electronico" />
-              <Input type="text" label="Asunto" />
-              <Input type="textarea" label="Mensaje" />
-            </div>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <div>
+            <Input type="text" label="Nombre completo" />
+            <Input type="email" label="Correo electronico" />
+            <Input type="text" label="Asunto" />
+            <Input type="textarea" label="Mensaje" />
+          </div>
 
-            <div className={styles.button}>
-              <Button type="submit">Enviar</Button>
-            </div>
-          </form>
+          <div className={styles.button}>
+            <Button type="submit">Enviar</Button>
+          </div>
+        </form>
           
-        {/* </div> */}
       </div>
     </section>
   )
