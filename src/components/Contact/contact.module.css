@@ -1,0 +1,24 @@
+.button {
+  margin-top: 50px;
+}
+
+.container {
+  width: 100%;
+}
+
+.formContainer {
+  width: 30%;
+  margin-inline: auto;
+}
+
+.formTitle {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  padding: 30px;
+  background-color: var(--color-light);
+  border-radius: 12px;
+}
