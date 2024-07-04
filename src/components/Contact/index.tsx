@@ -1,5 +1,5 @@
 "use client"
-import { FormEvent } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import Button from "../Button";
 import Heading from "../Heading";
 import Input from "../Input";
@@ -9,6 +9,7 @@ import { useFormik } from 'formik';
 import styles from "./contact.module.css";
 import { FormData } from "./Contact.types";
 import { contactSchema } from "./Contact.schema";
+import Alert from "../Alert";
 
 const INITIAL_STATE: FormData = {
   fullName: '',
@@ -18,18 +19,20 @@ const INITIAL_STATE: FormData = {
 }
 
 const Contact = () => {
-
-  const sanitizedId = (id: number) => id.toString()
+  const [showAlert, setShowAlert] = useState<boolean>(false);
+  const sanitizedId = (id: number) => id.toString();
 
   const formik = useFormik<FormData>({
     initialValues: INITIAL_STATE,
     validationSchema: contactSchema,
     onSubmit: async (form: FormData) => {
-      
-      console.log('envio: ', form);
-      
+      setShowAlert(true);
     }
-  })
+  });
+
+  useEffect(() => {
+    setTimeout(() => setShowAlert(false), 30000);
+  }, [showAlert])
 
   return (
     <Motion>
@@ -90,6 +93,9 @@ const Contact = () => {
             <div className={styles.button}>
               <Button type="submit">Enviar</Button>
             </div>
+            <Alert show={showAlert}>
+              <p>Mensaje enviado con éxito</p>
+            </Alert>
           </form>
             
         </div>
