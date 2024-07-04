@@ -1,5 +1,5 @@
 "use client"
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../Button";
 import Heading from "../Heading";
 import Input from "../Input";

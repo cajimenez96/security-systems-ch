@@ -1,7 +1,7 @@
 "use client"
-import { useState, useEffect } from 'react';
-import styles from './Alert.module.css';
-import { IAlert } from './Alert.types';
+import { useState, useEffect } from "react";
+import { IAlert } from "./Alert.types";
+import styles from "./alert.module.css";
 
 const Alert: React.FC<IAlert> = ({ children, show, duration = 30000 }) => {
   const [visible, setVisible] = useState(show);
