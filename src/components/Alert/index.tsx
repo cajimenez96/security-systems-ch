@@ -7,7 +7,7 @@ const Alert: React.FC<IAlert> = ({ children, show, duration = 30000 }) => {
   const [visible, setVisible] = useState(show);
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout;
     if (show) {
       setVisible(true);
       timer = setTimeout(() => {

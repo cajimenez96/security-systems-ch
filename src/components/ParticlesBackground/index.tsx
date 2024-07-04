@@ -38,7 +38,7 @@ const generateParticles = (count: number) => {
 };
 
 const ParticlesBackground = () => {
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<any>([]);
 
   useEffect(() => {
     setParticles(generateParticles(200));
