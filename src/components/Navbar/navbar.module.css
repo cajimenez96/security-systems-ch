@@ -42,13 +42,19 @@
   transition: all 0.5s ease;
 }
 
-.list a {
+.link {
+  border-bottom: 1px solid transparent;
   color: var(--color-light);
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
+  transition: all 0.3s ease;
+
+}
+.link:hover {
+  border-color: var(--color-light);
 }
 
 @media (max-width: 768px) {
@@ -58,31 +64,6 @@
   .avatar {
     height: 34px;
     width: 34px;
-  }
-
-  .list {
-    width: 70%;
-    height: 50px;
-    padding-left: 10px;
-
-    align-items: center;
-    justify-content: start;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    background-color: var(--color-navbar);
-  }
-
-  .list.open {
-    right: 0px;
-  }
-
-  .list.close {
-    right: -300px;
-  }
-
-  .menu {
-    display: block;
   }
 
   .name {
