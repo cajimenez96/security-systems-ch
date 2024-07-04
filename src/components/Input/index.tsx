@@ -35,7 +35,7 @@ const Input: React.FC<InputProps> = ({
           className={styles.input}
         />
       )}
-      {hasError && (<p className={styles.alert}>{error}</p>)}
+      {hasError && (<span className={styles.alert}>{error}</span>)}
     </div>
   );
 };
