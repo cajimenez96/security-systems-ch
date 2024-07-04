@@ -1,3 +1,7 @@
+.alert {
+  padding-inline: 10px;
+}
+
 .button {
   margin-top: 50px;
 }

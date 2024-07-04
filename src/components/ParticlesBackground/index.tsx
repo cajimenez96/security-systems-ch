@@ -1,10 +1,11 @@
 "use client"
 import { motion } from "framer-motion";
 import styles from "./particleBackground.module.css"
+import { useEffect, useState } from "react";
 
-const generateParticles = () => {
+const generateParticles = (count: number) => {
   const particles = [];
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < count; i++) {
     const size = Math.random() + 5;
     particles.push(
       <motion.div
@@ -36,6 +37,16 @@ const generateParticles = () => {
   return particles;
 };
 
-const ParticlesBackground = () => <div className={styles.container} id="tsparticles">{generateParticles()}</div>;
+const ParticlesBackground = () => {
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    setParticles(generateParticles(200));
+  }, []);
+
+  return (
+    <div className={styles.container} id="tsparticles">{particles}</div>
+  ) 
+};
 
 export default ParticlesBackground;

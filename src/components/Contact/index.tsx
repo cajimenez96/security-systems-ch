@@ -94,7 +94,7 @@ const Contact = () => {
               <Button type="submit">Enviar</Button>
             </div>
             <Alert show={showAlert}>
-              <p>Mensaje enviado con éxito</p>
+              <p className={styles.alert}>Mensaje enviado con éxito</p>
             </Alert>
           </form>
             
