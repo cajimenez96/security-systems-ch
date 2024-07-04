@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { links } from "./Navbar.data";
+import { links, title } from "./Navbar.data";
 import { AiOutlineMenu, AiOutlineClose  } from "react-icons/ai";
 import Image from "next/image";
 import styles from "./navbar.module.css";
@@ -18,7 +18,7 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         <Link href="#" className={styles.containerLogo}>
             <Image src={avatar} alt="Avatar" className={styles.avatar} />
-            <p className={styles.name}>Carlos Jimenez</p>
+            <p className={styles.name}>{title}</p>
         </Link>
         
         <div className={styles.menu} onClick={openMenu}>
